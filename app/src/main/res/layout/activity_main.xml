@@ -6,13 +6,123 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/casilla7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/casilla8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/casilla8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/casilla9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/casilla7" />
+
+    <Button
+        android:id="@+id/casilla9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/casilla8" />
+
+    <Button
+        android:id="@+id/casilla4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toTopOf="@+id/casilla7"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/casilla5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/casilla5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toTopOf="@+id/casilla8"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/casilla6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/casilla4" />
+
+    <Button
+        android:id="@+id/casilla6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toTopOf="@+id/casilla9"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/casilla5" />
+
+    <Button
+        android:id="@+id/casilla1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toTopOf="@+id/casilla4"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/casilla2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/casilla2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toTopOf="@+id/casilla5"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/casilla3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/casilla1" />
+
+    <Button
+        android:id="@+id/casilla3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toTopOf="@+id/casilla6"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/casilla2" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:text="Has ganado :3"
+        android:textSize="34sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/casilla2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
