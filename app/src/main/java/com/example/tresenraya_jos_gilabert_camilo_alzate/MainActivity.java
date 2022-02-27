@@ -4,15 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView textoVictoria;
     Integer[] botones;
-    int[] Tablero = new int[]{
+    int[] tablero = new int[]{
             0, 0, 0,
             0, 0, 0,
             0, 0, 0,
@@ -30,15 +32,16 @@ public class MainActivity extends AppCompatActivity {
         textoVictoria.setVisibility(View.INVISIBLE);
 
         botones  = new Integer[]{
-                R.id.b1, R.id.b2, R.id.b3,
-                R.id.b4, R.id.b5, R.id.b6,
-                R.id.b7, R.id.b8, R.id.b9,
+                R.id.casilla1, R.id.casilla2, R.id.casilla3,
+                R.id.casilla4, R.id.casilla5, R.id.casilla6,
+                R.id.casilla7, R.id.casilla8, R.id.casilla9,
         };
     }
 
-    public void ponerFicha(View v){
+    public void colocarFicha(View v){
         if(estado == 0){
             int numBoton = Arrays.asList(botones).indexOf(v.getId());
+
             if(tablero[numBoton] == 0) {
                 v.setBackgroundResource(R.drawable.cruz);
                 tablero[numBoton] = 1;
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+
+
     }
 
     public void ia(){
