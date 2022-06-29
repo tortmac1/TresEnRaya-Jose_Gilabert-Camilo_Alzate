@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textoVictoria;
     Integer[] botones;
+    Button[] btns;
     int[] tablero = new int[]{
             0, 0, 0,
             0, 0, 0,
@@ -36,14 +37,29 @@ public class MainActivity extends AppCompatActivity {
                 R.id.casilla4, R.id.casilla5, R.id.casilla6,
                 R.id.casilla7, R.id.casilla8, R.id.casilla9,
         };
+
+        btns =  new Button[]{
+                findViewById(R.id.casilla1), findViewById(R.id.casilla2), findViewById(R.id.casilla3),
+                findViewById(R.id.casilla4), findViewById(R.id.casilla5), findViewById(R.id.casilla6),
+                findViewById(R.id.casilla7), findViewById(R.id.casilla8), findViewById(R.id.casilla9),
+        };
+        /*
+        for (Button b: btns) {
+            b.setOnClickListener(view -> {
+               b.setText("X");
+            });
+        }
+
+         */
+
     }
 
     public void colocarFicha(View v){
         if(estado == 0){
             int numBoton = Arrays.asList(botones).indexOf(v.getId());
-
+            Button b = (Button) findViewById(botones[numBoton]);
             if(tablero[numBoton] == 0) {
-                v.setBackgroundResource(R.drawable.cruz);
+                b.setText("X");
                 tablero[numBoton] = 1;
                 fichasPuestas += 1;
                 estado = comprobarEstado();
@@ -65,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             pos = ran.nextInt(tablero.length);
         }
         Button b = (Button) findViewById(botones[pos]);
-        b.setBackgroundResource(R.drawable.circulo);
+        b.setText("O");
         tablero[pos] = -1;
     }
 

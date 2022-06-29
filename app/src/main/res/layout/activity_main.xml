@@ -103,13 +103,11 @@
         android:onClick="colocarFicha"
         android:scaleX="0.95"
         android:scaleY="0.95"
-        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/casilla4"
         app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintEnd_toStartOf="@+id/casilla2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/casilla2"
